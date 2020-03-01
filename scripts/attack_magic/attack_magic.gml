@@ -1,3 +1,5 @@
+/*
+USE ATTACK RANGED INSTEAD
 // attack_ranged();
 var dir_cartesian = get_direction_cartesian(is_facing); // The range of the arrows
 dir_cartesian[0] *= 10;
@@ -28,3 +30,4 @@ for (var i = 0; i < dir_cartesian[0] + 1; i++) {
 	}
 	if (attacked) break;
 }
+*/
