@@ -293,6 +293,14 @@
                 "resourcePath": "views\\fe9b412d-9dbc-4c17-a453-b74bda935206.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "ff8b831e-4be2-4a69-88f8-b8031e36d4e7",
+            "Value": {
+                "id": "a0444e39-c03f-4376-84d9-0e4c18adc5dd",
+                "resourcePath": "objects\\enemy_1\\enemy_1.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [

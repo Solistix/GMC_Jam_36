@@ -43,7 +43,7 @@ while (ds_priority_size(OpenedList) > 0) {
 		var nodeDistance;
 		
 		if (nodeObj != 0 || nodeObj != 1){
-			if (nodeObj.object_index == obj_enemy) {
+			if (object_get_parent(nodeObj.object_index) == obj_enemy) {
 				nodeDistance = 5 // Value for enemies for now
 			} else nodeDistance = 1;
 		} else {

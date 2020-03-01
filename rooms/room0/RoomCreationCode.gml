@@ -16,7 +16,7 @@ instance_create_layer(5 * global.grid_cell_size, 5 * global.grid_cell_size, "Ins
 generate_node_connections();
 
 // Set Enemy Instances
-instance_create_layer(6 * global.grid_cell_size, 6 * global.grid_cell_size, "Instances", obj_enemy);
-instance_create_layer(6 * global.grid_cell_size, 5 * global.grid_cell_size, "Instances", obj_enemy);
-instance_create_layer(6 * global.grid_cell_size, 4 * global.grid_cell_size, "Instances", obj_enemy);
-instance_create_layer(6 * global.grid_cell_size, 3 * global.grid_cell_size, "Instances", obj_enemy);
+instance_create_layer(6 * global.grid_cell_size, 6 * global.grid_cell_size, "Instances", enemy_1);
+instance_create_layer(6 * global.grid_cell_size, 5 * global.grid_cell_size, "Instances", enemy_1);
+instance_create_layer(6 * global.grid_cell_size, 4 * global.grid_cell_size, "Instances", enemy_1);
+instance_create_layer(6 * global.grid_cell_size, 3 * global.grid_cell_size, "Instances", enemy_1);
