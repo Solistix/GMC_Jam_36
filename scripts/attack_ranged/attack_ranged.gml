@@ -18,6 +18,11 @@ for (var i = 0; i < dir_cartesian[0] + 1; i++) {
 					break;
 				}
 			}
+			if (target) {
+				// Wall collision or non-damagable object
+				attacked = 1;
+				break;
+			}
 		}
 	}
 	if (attacked) break;
