@@ -89,6 +89,12 @@ with(obj_wall)
 	vertex_submit(other.wall_model,pr_trianglelist,sprite_get_texture(spr_matcap_5,0))
 }
 
+with(obj_arrow_trap)
+{
+	matrix_set(matrix_world,matrix_build(4*_scl*coords[0],-4*_scl*coords[1],0.5*_scl,0,0,0,_scl,_scl,_scl))
+	vertex_submit(other.spike_model,pr_trianglelist,sprite_get_texture(spr_matcap_7,0))
+}
+
 with(obj_player)
 {
 	var dir=convert_direction(is_facing)

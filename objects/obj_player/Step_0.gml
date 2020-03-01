@@ -50,5 +50,6 @@ if global.state == "PLAYER TURN" {
 	
 	if (keyboard_check_pressed(global.key_attack)) {	
 		player_attack(weapons[equipped_weapon]);
+		player_did_action();
 	}
 }

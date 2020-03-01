@@ -23,3 +23,6 @@ instance_create_layer(6 * global.grid_cell_size, 6 * global.grid_cell_size, "Ins
 instance_create_layer(6 * global.grid_cell_size, 5 * global.grid_cell_size, "Instances", enemy_1);
 instance_create_layer(6 * global.grid_cell_size, 4 * global.grid_cell_size, "Instances", enemy_1);
 instance_create_layer(6 * global.grid_cell_size, 3 * global.grid_cell_size, "Instances", enemy_1);
+
+// Set Trap Instances
+instance_create_layer(4 * global.grid_cell_size, 0 * global.grid_cell_size, "Instances", arrow_trap_left);

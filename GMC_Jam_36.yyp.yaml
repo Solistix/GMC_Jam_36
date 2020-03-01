@@ -4,6 +4,7 @@ assets:
       - "?sprite1 | GMSprite | 40e87f5c-5138-47d6-b033-76774187e7e5 | 4d042f94-8c57-4d2a-a76d-5475148bc2f3"
       - "?sprite2 | GMSprite | ee87f2b3-a7e7-4e57-a83d-942ac269dbd4 | 3c3ff406-9138-4d3d-aa8d-100cef50d98a"
       - "?sprite3 | GMSprite | 6e765a12-8855-4d5f-98ac-6f63771e3209 | dac5eab0-c02e-44dc-a324-9faa9d6ac125"
+      - "?sprite4 | GMSprite | 2111e042-67bb-43b0-9303-fd93588fc719 | 62db5f28-8abf-49f0-94c7-f9798f46b45d"
       - "?spr_matcap | GMSprite | f07fd1c5-9c74-4411-9f25-21b6d46ec4ec | 4eea5d05-7171-4180-a869-175c6ed2ff91"
       - "?spr_matcap_2 | GMSprite | 8e04bee0-3302-46e9-bb31-0ffbe9ff0f55 | 1026b839-e6fd-4734-a2ac-a7960230aa53"
       - "?spr_matcap_3 | GMSprite | ef9b1e11-f5cb-483a-8fe0-3a662c11e0ea | ed0d4b4c-1fc8-4359-9dc4-4c5ab26af3ea"
@@ -252,9 +253,17 @@ assets:
   - "objects | GMObject | 0dce1ec1-cfba-4dff-b6fc-d63d12d9ffdc | c0b12775-7aa2-46ba-910d-1e08528a32c1": 
       - "?obj_player | GMObject | 2264a0a3-1426-4b28-8bfd-1cd26f93fdb1 | 2eb0f3a7-5429-47a7-8e80-ed690e5c6208"
       - "?obj_wall | GMObject | db6d521f-d6de-48ac-9a9a-5ca5d12abf24 | 64e3249d-d32d-4ead-91d0-1974b17dc2f9"
-      - "?obj_enemy | GMObject | c9d6a012-ed24-4fc8-938c-18d77840dbdf | 0c047cac-420e-44f4-8081-5af3fa98bba4"
       - "?enemy_1 | GMObject | ff8b831e-4be2-4a69-88f8-b8031e36d4e7 | a0444e39-c03f-4376-84d9-0e4c18adc5dd"
       - "?obj_state | GMObject | 5b636bbc-a82e-4a8e-9c7a-f9852f0b3acf | d18bbfe5-0c9c-4668-a3e6-6e97d64003d5"
+      - "Parents | GMObject | ac57bb19-4d4b-4462-a94e-aedb87287e4f | f720ee09-18e5-4f74-82d9-eb1e40a8bff7": 
+          - "?obj_arrow_trap | GMObject | 38b6ad77-97fb-4f59-8764-79d4d10dfc95 | 0793d87b-eb32-4742-9bb3-156ac80dc50b"
+          - "?obj_enemy | GMObject | c9d6a012-ed24-4fc8-938c-18d77840dbdf | 0c047cac-420e-44f4-8081-5af3fa98bba4"
+      - "Traps | GMObject | df9106b6-c087-4050-867b-1e2738e0f4fb | 44d2e63a-d9c6-4bbc-aa24-8a59c8ca0843": 
+          - "ArrowTraps | GMObject | 15eb7b73-d600-4183-b969-16834c0f902c | 752dc3b1-cb71-48ca-923d-387040836338": 
+              - "?arrow_trap_left | GMObject | 58c57123-f560-4c86-b85b-f7a923942dd3 | e6282d03-e4d7-4c5d-a293-0ccd246c6fa9"
+              - "?arrow_trap_right | GMObject | aacd5a48-d847-43d3-b123-8be09d9515c5 | e6acb8e0-2553-4463-b76b-1597e8ea0f15"
+              - "?arrow_trap_down | GMObject | 2154aa19-e3a1-405a-a20c-972e4055570d | fd0cd134-f5b8-4797-9367-d167c8d3f4fd"
+              - "?arrow_trap_up | GMObject | e226f421-4bdc-43db-97d2-f62b724ab1db | 1fd6be3c-8226-4f3d-8e1a-1529455c3078"
       - "?obj_render | GMObject | 5e423e67-3dea-43ce-b864-cd4b3688b205 | 7f0963cd-e1fc-4fcb-b070-67e633c14356"
       - "?obj_test | GMObject | 4c09c075-828a-4215-b818-b1049bbad6f3 | dac495be-5be6-490a-a83f-816f9b077a19"
       - "?obj_gmlive | GMObject | 33634c94-b392-4387-9e8a-14a6330a1256 | e773c44a-e39f-4f62-9a03-9ce3a3555386"
@@ -299,8 +308,6 @@ assets:
       - "?TweenGMS | GMExtension | bf3a7c85-91e0-4419-a6cd-6eef92002897 | a27ddcdc-99ea-4f49-b91c-6d55d98710be"
   - "options | GMOptions | 516bfd69-bc4a-4992-885e-b0b4cc3b60e1 | 9e495fee-c83a-4509-a4da-237e0d8f68e6": 
       - "options\\windows\\options_windows.yy | GMWindowsOptions | cc98d028-7bdd-4680-85f3-c87a7baa481e | 38a0b0fa-4e2b-4e42-afcd-f1602f4f9744"
-      - "options\\linux\\options_linux.yy | GMLinuxOptions | a9188620-a624-4a5a-83ae-a1b53faf038b | 6a7b2c35-44da-409e-8914-d6eea91dbd99"
-      - "options\\mac\\options_mac.yy | GMMacOptions | f418569b-3bdd-4706-a0e4-364317f54032 | 993a7648-562d-4ecf-87c2-1d261d42fe02"
   - "configs | GMConfig | 5f34fed4-fa62-4023-b951-e6edc6112f98 | 7fa9ea7b-e5dc-4581-b42e-d302f7745b42": []
 projectExtras: 
   IsDnDProject: false
