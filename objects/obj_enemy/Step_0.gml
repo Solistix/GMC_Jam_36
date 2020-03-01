@@ -16,12 +16,16 @@ if global.state == "ENEMY TURN" {
 	if (!did_collide) {
 		if (coords[0] == grid_x && coords[1] - 1 == grid_y){
 			move_object("UP");
+			is_facing = "UP";
 		} else if (coords[0] == grid_x && coords[1] + 1 == grid_y){
 			move_object("DOWN");
+			is_facing = "DOWN";
 		} else if (coords[0] - 1 == grid_x && coords[1] == grid_y){
 			move_object("LEFT");
+			is_facing = "LEFT";
 		} else if (coords[0] + 1 == grid_x && coords[1] == grid_y){
 			move_object("RIGHT");
+			is_facing = "RIGHT";
 		}
 	} else if(did_collide != 1 && did_collide.object_index == obj_player) {
 		global.player.hp -= attack;
