@@ -7,8 +7,7 @@ if (hp <= 0) {
 	instance_destroy();
 }
 
-
-if keyboard_check_pressed(ord("R")) {
+if global.state == "ENEMY TURN" {
 	var path = get_shortest_path(coords, global.player.coords);
 	var grid_x = path[|1] mod global.grid_width;
 	var grid_y = floor(path[|1] / global.grid_width);

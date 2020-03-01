@@ -6,6 +6,9 @@ global.grid_width = 10;
 global.room_grid = ds_grid_create(global.grid_width, global.grid_height);
 global.grid_cell_size = 32;
 
+// Set State Instance
+instance_create_layer(0, 0, "Instances", obj_state);
+
 // Set Player Instance
 instance_create_layer(0, 0, "Instances", obj_player);
 
