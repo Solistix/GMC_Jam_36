@@ -17,4 +17,4 @@ if (dir == "UP") {
 	ds_grid_set(global.room_grid, ++coords[0], coords[1], id)
 }
 
-planned_move = [coords[0], coords[1]];
+planned_move = coords;

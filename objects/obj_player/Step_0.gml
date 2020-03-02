@@ -28,7 +28,7 @@ if global.state == "PLAYER TURN" {
 		player_attack(weapons[equipped_weapon]);
 		player_did_action();
 	}
-} else if (global.state == "PLAYER ANIMATION") {
+} else if (global.state == "PLAYER ANIMATION" || global.state == "TRAP ANIMATION") {
 	if (planned_move != 0) {
 		
 		var new_x = planned_move[0] * global.grid_cell_size

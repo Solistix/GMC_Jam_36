@@ -97,7 +97,6 @@ while (true) {
         reversedPath = ds_list_create();
         for (i = ds_list_size(Path) - 1; i >= 0; i--) {
             ds_list_add(reversedPath, ds_list_find_value(Path, i));
-			//show_debug_message(ds_list_find_value(Path, i));
         }
         ds_list_destroy(Path);
         ds_map_destroy(PreviousNodes);

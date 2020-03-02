@@ -7,7 +7,6 @@ dir_cartesian[1] *= argument0;
 if (arrows > 0) {
 	if (argument1) arrows--; // Only the player has limited ammo
 	var attacked = 0;
-	show_debug_message(dir_cartesian[0]);
 	for (var i = 0; i < abs(dir_cartesian[0]) + 1; i++) {
 		for (var j = 0; j < abs(dir_cartesian[1]) + 1; j++) {
 			if (i == 0 && j == 0){

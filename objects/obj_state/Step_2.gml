@@ -11,7 +11,7 @@ if (keyboard_check_pressed(global.key_end_turn) && global.state == "PLAYER TURN"
 	global.state = "TRAP TURN";
 } else if (global.state == "TRAP TURN") {
 	global.state = "TRAP ANIMATION";
-} else if (global.state == "TRAP ANIMATION") {
+} else if (global.state == "TRAP ANIMATION" && global.player.animation_done) {
 	// TODO: Set an alarm here to account for animation time?
 	global.state = "PLAYER TURN";
 } else if (global.state == "PLAYER ANIMATION" && global.player.animation_done) {
