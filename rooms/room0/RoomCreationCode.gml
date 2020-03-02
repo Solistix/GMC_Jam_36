@@ -26,3 +26,4 @@ instance_create_layer(6 * global.grid_cell_size, 3 * global.grid_cell_size, "Ins
 
 // Set Trap Instances
 instance_create_layer(4 * global.grid_cell_size, 0 * global.grid_cell_size, "Instances", arrow_trap_left);
+instance_create_layer(1 * global.grid_cell_size, 0 * global.grid_cell_size, "Instances", spike_trap);

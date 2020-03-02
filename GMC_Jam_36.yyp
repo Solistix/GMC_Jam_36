@@ -1023,6 +1023,14 @@
             }
         },
         {
+            "Key": "61c5c038-1549-4d9d-9f7d-539d86cf116c",
+            "Value": {
+                "id": "10d16f24-8d18-40f6-aebf-b36410476966",
+                "resourcePath": "objects\\spike_trap\\spike_trap.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6462f47c-8c24-455c-be1f-fca91b846c69",
             "Value": {
                 "id": "97ce93df-4520-4510-9f3e-c28acec2ecbb",
