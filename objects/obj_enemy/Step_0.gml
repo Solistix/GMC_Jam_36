@@ -31,4 +31,10 @@ if global.state == "ENEMY TURN" {
 		global.player.hp -= attack;
 	}
 	ds_list_destroy(path);
+} else if (global.state == "ENEMY ANIMATION") {
+	if (planned_move != 0) {
+		x = planned_move[0] * global.grid_cell_size;
+		y = planned_move[1] * global.grid_cell_size;
+		planned_move = 0;
+	}
 }

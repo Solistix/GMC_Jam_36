@@ -8,9 +8,11 @@ if global.state == "PLAYER TURN" {
 		if (!did_collide) {
 			move_object("UP");
 			player_did_action();
+			global.state = "PLAYER ANIMATION"
 		} else if(did_collide != 1 && object_get_parent(did_collide.object_index) == obj_enemy) {
 			attack_melee();
 			player_did_action();
+			global.state = "PLAYER ANIMATION"
 		}
 	} else if keyboard_check_pressed(global.key_move_left) {
 		var did_collide = check_collision(coords[0] - 1, coords[1]);
@@ -18,9 +20,11 @@ if global.state == "PLAYER TURN" {
 		if (!did_collide) {
 			move_object("LEFT");
 			player_did_action();
+			global.state = "PLAYER ANIMATION"
 		} else if(did_collide != 1 && object_get_parent(did_collide.object_index) == obj_enemy) {
 			attack_melee();
 			player_did_action();
+			global.state = "PLAYER ANIMATION"
 		}
 	} else if keyboard_check_pressed(global.key_move_down) {
 		var did_collide = check_collision(coords[0], coords[1] + 1);
@@ -28,9 +32,11 @@ if global.state == "PLAYER TURN" {
 		if (!did_collide) {
 			move_object("DOWN");
 			player_did_action();
+			global.state = "PLAYER ANIMATION"
 		} else if(did_collide != 1 && object_get_parent(did_collide.object_index) == obj_enemy) {
 			attack_melee();
 			player_did_action();
+			global.state = "PLAYER ANIMATION"
 		}
 	} else if keyboard_check_pressed(global.key_move_right) {
 		var did_collide = check_collision(coords[0] + 1, coords[1]);
@@ -38,9 +44,11 @@ if global.state == "PLAYER TURN" {
 		if (!did_collide) {
 			move_object("RIGHT");
 			player_did_action();
+			global.state = "PLAYER ANIMATION"
 		} else if(did_collide != 1 && object_get_parent(did_collide.object_index) == obj_enemy) {
 			attack_melee();
 			player_did_action();
+			global.state = "PLAYER ANIMATION";
 		}
 	}
 	
@@ -51,5 +59,11 @@ if global.state == "PLAYER TURN" {
 	if (keyboard_check_pressed(global.key_attack)) {	
 		player_attack(weapons[equipped_weapon]);
 		player_did_action();
+	}
+} else if (global.state == "PLAYER ANIMATION") {
+	if (planned_move != 0) {
+		x = planned_move[0] * global.grid_cell_size;
+		y = planned_move[1] * global.grid_cell_size;
+		planned_move = 0;
 	}
 }

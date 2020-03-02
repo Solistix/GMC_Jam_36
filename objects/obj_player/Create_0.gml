@@ -9,4 +9,6 @@ equipped_weapon = 0;
 action_counter = 0; // Amount of actions per turn
 arrows = 10;
 coords = [round(id.x / global.grid_cell_size), round(id.y / global.grid_cell_size)];
+planned_move = 0;
+
 global.player = ds_grid_set(global.room_grid, coords[0], coords[1], id);
