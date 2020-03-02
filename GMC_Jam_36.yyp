@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "169dc1dd-c879-46cd-a079-2fa660d022c3",
+            "Value": {
+                "id": "02e50f42-c11c-4544-a354-69605232f34d",
+                "resourcePath": "shaders\\shdMatCapTex\\shdMatCapTex.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "16ba84dd-f43c-457a-a10a-0c75056350da",
             "Value": {
                 "id": "e134e8e6-8071-498b-8725-e278993eb322",
@@ -676,6 +684,14 @@
                 "id": "8a461f03-2dd3-4680-b04c-3c7c77cfcd75",
                 "resourcePath": "scripts\\get_direction_cartesian\\get_direction_cartesian.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "48af05eb-3c3f-4311-b7c4-1184439cfb78",
+            "Value": {
+                "id": "c18b27fe-3450-4b6f-b165-b2d5525d4f23",
+                "resourcePath": "objects\\obj_init\\obj_init.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1711,6 +1727,14 @@
             }
         },
         {
+            "Key": "abea3ebf-3311-4917-b71d-45670baccf73",
+            "Value": {
+                "id": "983fd624-3827-4e53-ba10-b4fdf64c1ab0",
+                "resourcePath": "scripts\\tween_dir\\tween_dir.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ac57bb19-4d4b-4462-a94e-aedb87287e4f",
             "Value": {
                 "id": "f720ee09-18e5-4f74-82d9-eb1e40a8bff7",
@@ -2167,6 +2191,14 @@
             }
         },
         {
+            "Key": "dad805b6-5704-44d2-a99c-8175c0e23817",
+            "Value": {
+                "id": "3bc40d31-ff7f-4e70-b3cd-d6c9bad0b48c",
+                "resourcePath": "rooms\\room01\\room01.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "db6d521f-d6de-48ac-9a9a-5ca5d12abf24",
             "Value": {
                 "id": "64e3249d-d32d-4ead-91d0-1974b17dc2f9",
@@ -2307,6 +2339,14 @@
             "Value": {
                 "id": "c0b3e862-8d58-44c4-ba18-23639c84b7e4",
                 "resourcePath": "scripts\\TGMS_TweenCreate\\TGMS_TweenCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ebc2a2db-1a81-48d3-be63-9b0b3580d4fd",
+            "Value": {
+                "id": "f1260fcf-107d-4fbc-94d1-f22dda17d747",
+                "resourcePath": "scripts\\tween_z\\tween_z.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2742,7 +2782,9 @@
         "07075e40-27f6-4eaa-a2b5-aba79ca5503c",
         "a2a169ef-2446-4b8e-ada6-55d1ea8359e5",
         "2befc192-a5ba-4ea5-aa1f-5df90217ce5f",
-        "c00cc16b-9037-4738-afaf-99d51971a32c"
+        "c00cc16b-9037-4738-afaf-99d51971a32c",
+        "ebc2a2db-1a81-48d3-be63-9b0b3580d4fd",
+        "abea3ebf-3311-4917-b71d-45670baccf73"
     ],
     "tutorial": ""
 }

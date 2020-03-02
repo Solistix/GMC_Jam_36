@@ -3,6 +3,10 @@ if (live_call()) return live_result
 var w=ds_grid_width(global.room_grid)
 var h=ds_grid_height(global.room_grid)
 
+
+
+gpu_set_cullmode(cull_clockwise)
+
 if !setup && instance_exists(obj_player)
 {
 	setup=true
@@ -10,7 +14,7 @@ if !setup && instance_exists(obj_player)
 	x=obj_player.x//coords[0]*4*scl
 	y=-obj_player.y//coords[1]*4*scl
 	
-	var size=w*h
+	/*var size=w*h
 	var vnum=vertex_get_number(floor_model)
 	var vsize=vnum*36
 
@@ -47,7 +51,7 @@ if !setup && instance_exists(obj_player)
 		complete_floor_model=vertex_create_buffer_from_buffer(new_buff,vformat)
 		buffer_save(buffer_create_from_vertex_buffer(complete_floor_model,buffer_fixed,1),"floor_model.buff")
 		vertex_freeze(complete_floor_model)
-	}
+	}*/
 	
 	/*for(var i=0;i<w;i++)
 	{
@@ -79,8 +83,14 @@ matrix_set(matrix_view,matrix_build_lookat(x+lengthdir_x(dist,camera_dir),y+leng
 
 shader_set(shdTest)
 
-matrix_set(matrix_world,matrix_build(0,0,0,0,0,0,scl,scl,scl))
-vertex_submit(complete_floor_model,pr_trianglelist,sprite_get_texture(spr_matcap,0))
+for(var i=0;i<w;i++)
+{
+	for(var j=0;j<h;j++)
+	{
+		matrix_set(matrix_world,matrix_build(4*i*scl,-4*j*scl,0,0,0,0,scl,scl,scl))
+		vertex_submit(floor_model,pr_trianglelist,sprite_get_texture(spr_matcap,0))
+	}
+}
 
 var _scl=scl
 
@@ -96,22 +106,27 @@ with(obj_arrow_trap)
 	vertex_submit(other.spike_model,pr_trianglelist,sprite_get_texture(spr_matcap_7,0))
 }
 
-with(obj_player)
-{
-	var dir=convert_direction(is_facing)
-	matrix_set(matrix_world,matrix_build(x,-y,0.5*_scl,0,0,dir,_scl,_scl,_scl))
-	vertex_submit(other.player_model,pr_trianglelist,sprite_get_texture(spr_matcap_7,0))
-}
-
 with(enemy_1)
 {
 	var dir=convert_direction(is_facing)
-	matrix_set(matrix_world,matrix_build(4*_scl*coords[0],-4*_scl*coords[1],0.5*_scl,0,0,dir,_scl,_scl,_scl))
+	matrix_set(matrix_world,matrix_build(x,-y,(z+0.5)*_scl,rot_dir,0,image_angle,_scl,_scl,_scl))
 	vertex_submit(other.enemy_model,pr_trianglelist,sprite_get_texture(spr_matcap_7,0))
 }
 
+//shader_set(shdMatCapTex)
+//texture_set_stage(shader_get_sampler_index(shdMatCapTex,"matcap_tex"),sprite_get_texture(spr_matcap_6,0))
+with(obj_player)
+{
+	var dir=convert_direction(is_facing)
+	matrix_set(matrix_world,matrix_build(x,-y,(z+0.5)*_scl,rot_dir,0,image_angle,_scl,_scl,_scl))
+	vertex_submit(other.player_model,pr_trianglelist,sprite_get_texture(spr_matcap_7,0))
+}
+
+
 shader_reset()
 matrix_set(matrix_world,m)
+
+gpu_set_cullmode(cull_noculling)
 
 if keyboard_check_released(vk_enter)
 {

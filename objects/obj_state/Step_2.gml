@@ -5,10 +5,21 @@ if (keyboard_check_pressed(global.key_end_turn) && global.state == "PLAYER TURN"
 	global.player.action_counter = 0;
 	global.state = "ENEMY TURN";
 } else if (global.state == "ENEMY TURN") {
+	with(obj_enemy) {
+		animation_done=false
+	}
 	global.state = "ENEMY ANIMATION";
 } else if (global.state == "ENEMY ANIMATION") {
+	var _animation_done=true
+	with(obj_enemy)
+	{
+		if !animation_done {
+			animation_done=false
+			break
+		}
+	}
 	// TODO: Set an alarm here to account for animation time?
-	global.state = "TRAP TURN";
+	if _animation_done {global.state = "TRAP TURN";}
 } else if (global.state == "TRAP TURN") {
 	global.state = "TRAP ANIMATION";
 } else if (global.state == "TRAP ANIMATION") {

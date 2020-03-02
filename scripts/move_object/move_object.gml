@@ -3,9 +3,8 @@
 //	room_grid (Global)
 //  coords (Step)
 
-
-var dir = argument0;
-
+var dir = argument[0];
+	
 ds_grid_set(global.room_grid, coords[0], coords[1], 0)
 if (dir == "UP") {
 	ds_grid_set(global.room_grid, coords[0], --coords[1], id)
@@ -18,3 +17,4 @@ if (dir == "UP") {
 }
 
 planned_move = [coords[0], coords[1]];
+
