@@ -49,6 +49,7 @@ if global.state == "PLAYER TURN" {
 			attack_melee();
 			player_did_action();
 			global.state = "PLAYER ANIMATION";
+			animation_done=false
 		}
 	}
 	
@@ -62,8 +63,18 @@ if global.state == "PLAYER TURN" {
 	}
 } else if (global.state == "PLAYER ANIMATION") {
 	if (planned_move != 0) {
-		x = planned_move[0] * global.grid_cell_size;
-		y = planned_move[1] * global.grid_cell_size;
-		planned_move = 0;
+		
+		var new_x = planned_move[0] * global.grid_cell_size
+		var new_y = planned_move[1] * global.grid_cell_size
+		
+		x = lerp(x,new_x, 0.2);
+		y = lerp(y,new_y, 0.2);
+		
+		if (abs(x-new_x)<=1 && abs(y-new_y)<=1) {
+			x=new_x
+			y=new_y
+			animation_done=true
+			planned_move = 0;
+		}
 	}
 }
