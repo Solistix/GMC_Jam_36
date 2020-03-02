@@ -2127,6 +2127,14 @@
             }
         },
         {
+            "Key": "d629529c-cfe1-4129-ba03-efe324ec4a88",
+            "Value": {
+                "id": "01c5d794-5da7-48d0-8d64-fd23dabdcb50",
+                "resourcePath": "scripts\\player_movement\\player_movement.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d68983b6-fc75-414e-8fc1-32b055694466",
             "Value": {
                 "id": "3ea0ae8f-bd23-49ea-903c-066f43fab98f",
@@ -2555,6 +2563,7 @@
         "f204b1de-5c09-4e2e-912b-605942778883",
         "4c69089e-0a24-464b-9391-32e8dfa04adf",
         "9226aa19-ea2d-48f3-b585-46e4fe6d1a12",
+        "d629529c-cfe1-4129-ba03-efe324ec4a88",
         "86f9fc00-a2d0-4514-ac4e-d024e4a57f8f",
         "b0536333-5525-465f-816f-5432aef6e659",
         "cc9755df-ef6d-43dc-a181-a36155725b1f",

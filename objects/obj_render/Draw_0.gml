@@ -6,8 +6,9 @@ var h=ds_grid_height(global.room_grid)
 if !setup && instance_exists(obj_player)
 {
 	setup=true
-	x=obj_player.coords[0]*4*scl
-	y=-obj_player.coords[1]*4*scl
+	scl=global.grid_cell_size/4
+	x=obj_player.x//coords[0]*4*scl
+	y=-obj_player.y//coords[1]*4*scl
 	
 	var size=w*h
 	var vnum=vertex_get_number(floor_model)
@@ -98,7 +99,7 @@ with(obj_arrow_trap)
 with(obj_player)
 {
 	var dir=convert_direction(is_facing)
-	matrix_set(matrix_world,matrix_build(4*_scl*coords[0],-4*_scl*coords[1],0.5*_scl,0,0,dir,_scl,_scl,_scl))
+	matrix_set(matrix_world,matrix_build(x,-y,0.5*_scl,0,0,dir,_scl,_scl,_scl))
 	vertex_submit(other.player_model,pr_trianglelist,sprite_get_texture(spr_matcap_7,0))
 }
 
@@ -111,3 +112,8 @@ with(enemy_1)
 
 shader_reset()
 matrix_set(matrix_world,m)
+
+if keyboard_check_released(vk_enter)
+{
+	game_restart()
+}

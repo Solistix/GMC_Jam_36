@@ -20,6 +20,8 @@ setup=false
 
 display_reset(8,1)
 
-scl=70
+
 dist=1000
 camera_dir=45
+
+
